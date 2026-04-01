@@ -1,32 +1,107 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial;
-  background-color: #0f172a;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
+/* Background */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Container */
 .container {
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 100px;
 }
 
-button {
-  padding: 12px 20px;
-  font-size: 16px;
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Input box */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input */
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
-  background-color: #3b82f6;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #cbd5f5;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #3b82f6;
+}
+
+/* Button */
+button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.5);
 }
 
+/* Status */
+#status {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Output box */
 #output {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 15px;
-  background: #1e293b;
-  border-radius: 8px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 60px;
+  text-align: left;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+/* Scroll if content grows */
+#output {
+  max-height: 150px;
+  overflow-y: auto;
 }

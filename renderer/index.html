@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Voice Assistant</title>
+  <title>Voice System Assistant</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
-    <h1> Voice System Assistant</h1>
+    <h1>🤖 System Assistant</h1>
 
-    <button id="micBtn"> Start Listening</button>
+    <div class="input-box">
+      <input type="text" id="commandInput" placeholder="Type your command here..." />
+      <button id="submitBtn">Run</button>
+    </div>
 
     <p id="status">Status: Idle</p>
 
     <div id="output">
-      <p>Your command will appear here...</p>
+      <p>Output will appear here...</p>
     </div>
   </div>
 
